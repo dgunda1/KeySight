@@ -10,26 +10,25 @@
 #define ClearScreen() system("cls")
 //Student filename
 #define SFNAME "studentDetails.txt"
-// Horizontal Consisting of 'x's
 #define PrintLine(x) cout<<'\n'; for(int _=0;_<80;_++) cout<<x; cout<<'\n'
 using namespace std;
 bool strcmpis(pair <string, int> s1, pair <string,int> s2){
 	return (strcasecmp(s1.first.c_str(),s2.first.c_str()))<0;
 }
-int scan(){							//Scan function for input of only non-negative integers
-	string ch;						//Taking inital input through string
+int scan(){
+	string ch;
 	int i,v;
 	do{
 		v=1;
 		cin>>ch;
-		for(i=0;i<ch.size();i++){	//Checking each character is digit
+		for(i=0;i<ch.size();i++){
 			if(!isdigit(ch[i])){
 				v=0;
 				break;
 			}
 		}
 	}while(!v);
-	return atoi(ch.c_str());		//Coverting string back to integer
+	return atoi(ch.c_str());
 }
 
 //Student class representing student record
